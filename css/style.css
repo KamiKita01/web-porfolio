@@ -9691,12 +9691,3 @@ textarea.form-control {
     width: 100%;
     height: 100%;
 }
-
-.resume-wrap-link {
-    display: flex;
-    text-decoration: none;
-    color: inherit;
-}
-.resume-wrap-link:hover {
-    opacity: 0.8; /* 호버 시 약간의 투명도 효과 */
-}
