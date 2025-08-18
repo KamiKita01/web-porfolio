@@ -196,147 +196,30 @@
 								</div>
 							</div>
 						</div>
-						</script>
-						<div class="resume-wrap d-flex ftco-animate clickable-section" onclick="openPopup()">
-						   	 <div class="icon d-flex align-items-center justify-content-center">
-						       		 <span class="flaticon-ideas"></span>
-						    	</div>
-						   	 <div class="text pl-3">
-						       		<span class="date">2023</span>
-						        	<h2>VR 기반 3축 모션 시뮬레이터 연동 게임 개발</h2>
-						        	<span class="position">산학협력 프로젝트</span>
-						        	<div>
+						<div class="resume-wrap d-flex ftco-animate">
+							<div class="icon d-flex align-items-center justify-content-center">
+								<span class="flaticon-ideas"></span>
+							</div>
+							<div class="text pl-3">
+								<span class="date">2023</span>
+								<h2>VR 기반 3축 모션 시뮬레이터 연동 게임 개발</h2>
+								<span class="position">산학협력 프로젝트</span>
+								<div>
  									<span class="btn btn-outline-secondary">Unity</span>
   									<span class="btn btn-outline-secondary">6인 개발</span>
   									<span class="btn btn-outline-secondary">C#</span>
 									<span class="btn btn-outline-secondary">VR</span>
 									<span class="btn btn-outline-secondary">모션 시뮬레이터</span>
 								</div>
-						        	<p>산학협력 프로젝트를 통해 VR 게임과 3축 모션 시뮬레이터를 연동한 체험형 콘텐츠를 제작했습니다.
+								<p>산학협력 프로젝트를 통해 VR 게임과 3축 모션 시뮬레이터를 연동한 체험형 콘텐츠를 제작했습니다.
 								외부에서도 게임 화면을 볼 수 있도록 미러링 기능을 추가해, 시연과 소통에 도움이 되도록 했습니다.
-								이 프로젝트를 통해 기업 측에는 개발 효율성과 기술 활용 가능성을 함께 보여줄 수 있었습니다.</p>
-								 <div class="video-container">
-                    							<iframe src="https://www.youtube.com/embed/1DHMIUte9tg?si=sHNaBuRXGqS6sRIj" frameborder="0" allowfullscreen></iframe>
-                						</div>
-						    	</div>
-						</div>
-						<!-- 팝업 모달 -->
-						<div id="popupModal" class="modal">
-						    <div class="modal-content">
-						        <span class="close">&times;</span>
-						        <h2>VR 기반 3축 모션 시뮬레이터 연동 게임 개발</h2>
-						        <p>개발 기간: 2024/01/06 ~ 2023/05/14</p>
-						        <p>기술 스택: Unity, C#, XR</p>
-						        <p>설명: VR과 3축 모션 시뮬레이터를 활용한 액션 슈팅 게임</p>
-						        <div class="modal-images">
-						            <img src="https://via.placeholder.com/150" alt="Game Screenshot 1">
-						            <img src="https://via.placeholder.com/150" alt="Game Screenshot 2">
-						            <img src="https://via.placeholder.com/150" alt="Game Screenshot 3">
-						        </div>
-						    </div>
+								이 프로젝트를 통해 기업 측에는 개발 효율성과 기술 활용 가능성을 함께 보여줄 수 있었습니다</p>
+								<div class="video-container">
+                    					<iframe src="https://www.youtube.com/embed/1DHMIUte9tg?si=sHNaBuRXGqS6sRIj" frameborder="0" allowfullscreen></iframe>
+                				</div>
+							</div>
 						</div>
 						
-						<style>
-						.clickable-section {
-						    cursor: pointer;
-						    position: relative;
-						    will-change: transform;
-						}
-						.clickable-section:hover {
-						    border: 2px solid #87CEEB;
-						    border-radius: 5px;
-						    transition: border 0.2s ease-in-out;
-						}
-						
-						/* 기본 상태 */
-						.modal {
-						    display: none;
-						    position: fixed;
-						    top: 0;
-						    left: 0;
-						    width: 100%;
-						    height: 100%;
-						    background-color: rgba(0, 0, 0, 0.5);
-						    z-index: 1000;
-						    opacity: 0;
-						    transition: opacity 0.3s ease-in-out;
-						}
-						
-						/* 보여질 때 */
-						.modal.show {
-						    display: block;
-						    opacity: 1;
-						}
-						
-						.modal-content {
-						    background-color: #fff;
-						    margin: 10% auto;
-						    padding: 20px;
-						    border: 1px solid #888;
-						    width: 80%;
-						    max-width: 500px;
-						    border-radius: 10px;
-						    position: relative;
-						    transform: scale(0.9);
-						    transition: transform 0.3s ease-in-out;
-						}
-						
-						/* 열릴 때 확대 */
-						.modal.show .modal-content {
-						    transform: scale(1);
-						}
-						
-						.close {
-						    color: #aaa;
-						    float: right;
-						    font-size: 28px;
-						    font-weight: bold;
-						    cursor: pointer;
-						}
-						.close:hover,
-						.close:focus {
-						    color: black;
-						    text-decoration: none;
-						}
-						.modal-images img {
-						    margin: 10px;
-						    max-width: 100px;
-						}
-						</style>
-						
-						<script>
-						document.querySelector(".clickable-section").addEventListener("click", function(e) {
-						    e.stopPropagation(); // 이벤트 중복 방지
-						    openPopup();
-						});
-						
-						function openPopup() {
-						    const modal = document.getElementById("popupModal");
-						    modal.style.display = "block"; // 다시 열릴 수 있도록 보이게
-						    setTimeout(() => {
-						        modal.classList.add("show");
-						    }, 10); // 약간의 지연으로 transition 실행
-						}
-						
-						function closePopup() {
-						    const modal = document.getElementById("popupModal");
-						    modal.classList.remove("show");
-						    setTimeout(() => {
-						        modal.style.display = "none";
-						    }, 300); // transition 시간 후 완전히 닫기
-						}
-						
-						// 닫기 버튼
-						document.querySelector(".modal .close").addEventListener("click", closePopup);
-						
-						// 배경 클릭 시 닫기
-						window.addEventListener("click", function(event) {
-						    const modal = document.getElementById("popupModal");
-						    if (event.target === modal) {
-						        closePopup();
-						    }
-						});
-						</script>
 						<div class="resume-wrap d-flex ftco-animate clickable-section" onclick="openPopup()">
 						   	 <div class="icon d-flex align-items-center justify-content-center">
 						       		 <span class="flaticon-ideas"></span>
