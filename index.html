@@ -241,10 +241,10 @@
 						    	</div>
 						</div>
 						
-						<!-- 팝업 모달 -->
+					<!-- 팝업 모달 -->
 						<div id="popupModal" class="modal">
 						    <div class="modal-content">
-						        <span class="close" onclick="closePopup()">&times;</span>
+						        <span class="close">&times;</span>
 						        <h2>마법사 키우기</h2>
 						        <p>개발 기간: 2023/07/03 ~ 2023/08/21</p>
 						        <p>기술 스택: Unity, C#</p>
@@ -269,7 +269,7 @@
 						    transition: border 0.2s ease-in-out;
 						}
 						
-						/* 팝업 애니메이션 */
+						/* 기본 상태 */
 						.modal {
 						    display: none;
 						    position: fixed;
@@ -279,10 +279,11 @@
 						    height: 100%;
 						    background-color: rgba(0, 0, 0, 0.5);
 						    z-index: 1000;
-						
 						    opacity: 0;
 						    transition: opacity 0.3s ease-in-out;
 						}
+						
+						/* 보여질 때 */
 						.modal.show {
 						    display: block;
 						    opacity: 1;
@@ -295,11 +296,13 @@
 						    border: 1px solid #888;
 						    width: 80%;
 						    max-width: 500px;
-						    border-radius: 5px;
+						    border-radius: 10px;
 						    position: relative;
 						    transform: scale(0.9);
 						    transition: transform 0.3s ease-in-out;
 						}
+						
+						/* 열릴 때 확대 */
 						.modal.show .modal-content {
 						    transform: scale(1);
 						}
@@ -330,16 +333,22 @@
 						
 						function openPopup() {
 						    const modal = document.getElementById("popupModal");
-						    modal.classList.add("show");
+						    modal.style.display = "block"; // 다시 열릴 수 있도록 보이게
+						    setTimeout(() => {
+						        modal.classList.add("show");
+						    }, 10); // 약간의 지연으로 transition 실행
 						}
 						
 						function closePopup() {
 						    const modal = document.getElementById("popupModal");
 						    modal.classList.remove("show");
 						    setTimeout(() => {
-						        modal.style.display = "none"; // 애니메이션 후 닫기
-						    }, 300);
+						        modal.style.display = "none";
+						    }, 300); // transition 시간 후 완전히 닫기
 						}
+						
+						// 닫기 버튼
+						document.querySelector(".modal .close").addEventListener("click", closePopup);
 						
 						// 배경 클릭 시 닫기
 						window.addEventListener("click", function(event) {
