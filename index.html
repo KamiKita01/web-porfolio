@@ -384,11 +384,9 @@
 					  border-radius: 5px;
 					  transition: border-color 0.2s ease-in-out;
 					}
-					
 					.clickable-section:hover {
 					  border-color: #87CEEB;
 					}
-					
 					.modal {
 					  display: none;
 					  position: fixed;
@@ -401,32 +399,27 @@
 					  opacity: 0;
 					  transition: opacity 0.3s ease-in-out;
 					}
-					
 					.modal.show {
 					  display: block;
 					  opacity: 1;
 					}
-					
 					.modal-content {
 					  background: #fff;
-					  margin: 10% auto;
+					  margin: 5% auto; /* 위치를 위로 조정 (10% -> 5%) */
 					  padding: 20px;
 					  border: 1px solid #888;
 					  width: 80%;
-					  max-width: 500px;
+					  max-width: 700px; /* 가로 크기를 500px -> 700px로 확장 */
 					  border-radius: 10px;
 					  position: relative;
 					  transform: scale(0.9);
 					  transition: transform 0.3s ease-in-out;
-					
 					  max-height: 80vh;
 					  overflow-y: auto; /* 내용이 넘치면 스크롤바 생성 */
 					}
-					
 					.modal.show .modal-content {
 					  transform: scale(1);
 					}
-					
 					.close {
 					  color: #aaa;
 					  float: right;
@@ -434,17 +427,14 @@
 					  font-weight: bold;
 					  cursor: pointer;
 					}
-					
 					.close:hover {
 					  color: black;
 					}
-						
 					.image-row {
 					  display: flex;
 					  justify-content: space-between; /* 이미지 사이 간격 균등 */
 					  margin-bottom: 10px; /* 동영상과 간격 */
 					}
-					
 					.image-row img {
 					  width: 32%; /* 3개가 꽉 차게 */
 					  border-radius: 5px;
