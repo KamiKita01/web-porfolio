@@ -444,19 +444,30 @@
 					  border-radius: 5px;
 					  object-fit: cover; /* 비율 유지하며 잘림 */
 					}
+					.video-container {
+					    width: 560px; /* 영상 원래 크기 고정 */
+					    max-width: 100%; /* 반응형으로 축소 가능 */
+					}
+					.video-container iframe {
+					    width: 100%; /* 컨테이너에 맞춰 조정 */
+					    height: auto; /* 비율 유지 */
+					}
 					.btn-detail {
-					  padding: 5px 30px; /* 좌우 패딩 유지 */
-					  width: 100%; /* 부모 컨테이너에 맞춤 */
-					  max-width: 560px; /* 영상 크기와 동일 */
-					  text-align: center; /* 텍스트 중앙 정렬 */
-					  margin-top: 15px; /* 영상과 버튼 사이 여백 */
-					  display: block; /* 너비를 정확히 적용 */
+					    padding: 5px 30px;
+					    width: 100%; /* 컨테이너 너비에 맞춤 */
+					    max-width: 560px; /* 영상 최대 크기와 동기화 */
+					    text-align: center;
+					    margin-top: 15px;
+					    display: block;
 					}
 					@media (max-width: 600px) {
-					  .btn-detail {
-					    width: 100%; /* 작은 화면에서 전체 너비 */
-					    max-width: 100%; /* 최대 너비 제한 해제 */
-					  }
+					    .btn-detail {
+					        width: 100%;
+					        max-width: 100%;
+					    }
+					    .video-container {
+					        width: 100%; /* 모바일에서 전체 너비 */
+					    }
 					}
 					</style>
 					<!-- =================== 스크립트 =================== -->
