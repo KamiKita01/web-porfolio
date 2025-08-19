@@ -382,11 +382,15 @@
 					  margin:10% auto;
 					  padding:20px;
 					  border:1px solid #888;
-					  width:80%; max-width:500px;
+					  width:80%; 
+					  max-width:500px;
 					  border-radius:10px;
 					  position:relative;
 					  transform:scale(0.9);
 					  transition:transform 0.3s ease-in-out;
+					
+					  max-height: 80vh;
+					  overflow-y: auto;      /* 내용이 넘치면 스크롤바 생성 */
 					}
 					.modal.show .modal-content {
 					  transform:scale(1);
@@ -426,7 +430,7 @@
 					  }
 					});
 					</script>
-
+<!-- =================== 스크립트 끝  =================== -->
 					<div id="page-2" class="page two">
 						<h2 class="heading">Skills</h2>
 						<div class="row progress-circle mb-5">
