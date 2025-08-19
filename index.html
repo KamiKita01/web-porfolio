@@ -317,7 +317,18 @@
 					    <h2>Photon을 활용한 Unity 기반 멀티플레이 게임</h2>
 					    <p>개발 기간: 2024/05/26 ~ 2024/06/20</p>
 					    <p>기술 스택: Unity, Photon, C#</p>
-					    <p>설명: Photon Network 기반 멀티플레이 3D 액션 게임.</p>
+					    <p>기획: 포론과 유니티를 통해서 멀티 소울라이크류 게임을 제작하여 어느정도의 운과 협동심을 느끼게 하며 데미지를 최고로 많이 준 플레이어를 뽑아서 경쟁심을 주고자 하였습니다.</p>
+						<p>문제점: 룰렛 시스템을 통해 룰렛에 걸린 무기를 스폰하고 이를 플레이어 손위치에 스폰시키는 것과 이를 동기화 시키는데 문제가 발생하였습니다.</p>
+						<p>해결방안: 룰렛은 룰렛의 칸들을 프리팹으로 정의하고 배열로 받고 스폰할 의 1번배열이 걸리면 무기의 1번 배열에 있는 무기를 스폰하도록 만들었고,
+						이를 Photon RPC를 통해서 동기화 신호를 전달하여 클라이언트에도 동일하게 스폰하도록 하여 해결하였습니다. </p>
+						<div class="video-container">
+					      <iframe width="560" height="315" 
+					              src="https://www.youtube.com/embed/DrSmI-TuQD4?si=fCdtrVrVnAnAtiN0" 
+					              frameborder="0" 
+					              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+					              allowfullscreen>
+					      </iframe>
+					    </div>		
 					  </div>
 					</div>
 					<!-- =================== 마법사 키우기 =================== -->
