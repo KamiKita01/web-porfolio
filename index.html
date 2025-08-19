@@ -187,6 +187,7 @@
 					                <div class="video-container">
 					                    <iframe width="560" height="315" src="https://www.youtube.com/embed/AyWVjuc62dw?si=kmm4Yi0dUPUaSfGJ" frameborder="0" allowfullscreen></iframe>
 					                </div>
+									<span class="btn btn-outline-secondary btn-detail">자세히 보기</span>
 					            </div>
 					        </div>
 					
@@ -443,7 +444,11 @@
 					  border-radius: 5px;
 					  object-fit: cover; /* 비율 유지하며 잘림 */
 					}
-						
+					.btn-detail {
+						padding: 5px 30px; /* 좌우 패딩을 늘려 가로 길이를 확장 */
+					    min-width: 150px; /* 최소 가로 길이를 설정 (필요에 따라 조정) */
+					    text-align: center; /* 텍스트를 중앙 정렬 */
+					}
 					</style>
 					<!-- =================== 스크립트 =================== -->
 					<script>
@@ -462,7 +467,6 @@
 					  closeBtn.addEventListener("click",function(){
 					    const modal=this.closest(".modal");
 					    
-					    // ✅ iframe 영상 멈추기
 					    modal.querySelectorAll("iframe").forEach(iframe => {
 					      iframe.src = iframe.src;
 					    });
@@ -475,7 +479,6 @@
 					// 팝업 바깥 클릭 시 닫기
 					window.addEventListener("click",function(event){
 					  if(event.target.classList.contains("modal")){
-					    // ✅ iframe 영상 멈추기
 					    event.target.querySelectorAll("iframe").forEach(iframe => {
 					      iframe.src = iframe.src;
 					    });
