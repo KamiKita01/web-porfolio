@@ -9691,3 +9691,34 @@ textarea.form-control {
     width: 100%;
     height: 100%;
 }
+
+/* 모바일 가로 스크롤 방지 종합 패치 */
+@media (max-width: 767.98px) {
+  .container,
+  .container-fluid {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  .row {
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+  }
+
+  [class*="col-"] {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  .resume-wrap,
+  .blog-entry,
+  .modal-content {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* 강제 오버플로우 숨김 (최후 수단) */
+  body {
+    overflow-x: hidden;
+  }
+}
